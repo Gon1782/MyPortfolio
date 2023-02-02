@@ -1,0 +1,21 @@
+@import "@/styles/colors"
+
+.container
+  display: flex
+  width: 100vw
+  height: 100vh
+  background-color: $bgColor
+  color: $fontColor
+  &__light
+    @extend .container
+    background-color: $fontColor
+    color: $bgColor
+.main_container
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 90%
+  height: 90%
+  margin: auto
+  background-color: #2F3273
+  border-radius: 70px

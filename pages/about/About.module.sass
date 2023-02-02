@@ -1,0 +1,58 @@
+@import "@/styles/colors"
+
+.box
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  width: 95%
+  height: 90%
+  background-color: $componentColor
+  border-radius: 40px
+.header
+  display: flex
+  align-items: center
+  width: 90%
+  height: 3rem
+  margin: 0 auto
+  padding: 1rem 5rem
+  font-size: 40px
+  border-bottom: 1px solid $containerColor
+.body
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  align-items: center
+  width: 80%
+  height: 80%
+  margin: auto
+  a
+    text-decoration: none
+    color: $fontColor
+  &_light
+    @extend .body
+    a
+      text-decoration: none
+      color: $bgColor
+.info_box
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 30%
+  height: 40%
+  background-color: #777DF2
+  border-radius: 30px
+.info
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 1rem
+  div
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 100px
+    gap: 0.5rem
+    font-size: 1.25rem
+    .name
+      font-size: 1.5rem
+      font-weight: bold
