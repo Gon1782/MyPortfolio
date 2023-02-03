@@ -9,7 +9,6 @@ const Experience = () => {
       </Head>
       <div className={St.box}>
         <div className={St.header}>Experience</div>
-        <div>ui만들기귀찮다</div>
       </div>
     </>
   );
