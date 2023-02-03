@@ -9,23 +9,23 @@ const Project = () => {
 
   const projects = [
     {
-      image: "",
+      image: require("@/assets/projects/batman.png"),
       title: "Batman",
       category: "팀 프로젝트",
-      content: "간단소개간단소개",
+      content: "축구 정보공유 사이트",
       duration: "2022-12-22 ~ 2022-12-28",
       techs: ["react", "react-query", "redux"],
     },
     {
-      image: "",
+      image: require("@/assets/projects/pikachoong.png"),
       title: "피카츙",
       category: "팀 프로젝트",
-      content: "간단소개간단소개",
+      content: "내 주변 전기차 충전소 찾기 사이트",
       duration: "2023-01-22 ~ 2023-01-30",
       techs: ["react", "react-query", "redux"],
     },
     {
-      image: "",
+      image: require("@/assets/projects/portfolio.png"),
       title: "나만의 포트폴리오 사이트",
       category: "개인 프로젝트",
       content: "간단소개간단소개",
@@ -33,6 +33,7 @@ const Project = () => {
       techs: ["next-js", "react-query", "recoil", "sass"],
     },
   ];
+
   return (
     <>
       <Head>
@@ -43,10 +44,15 @@ const Project = () => {
           return (
             <div
               className={i % 2 === 0 ? St.container : St.container_2}
-              key={x.title}>
+              key={x.title}
+            >
               <div className={i % 2 === 0 ? St.box : St.box_2}>
                 <Image
-                  src={require("@/assets/projects/default.png")}
+                  src={
+                    !!x.image
+                      ? x.image
+                      : require("@/assets/projects/default.png")
+                  }
                   className={St.project_img}
                   alt="Project Image"
                 />
@@ -55,21 +61,22 @@ const Project = () => {
                   <div>
                     <div className={St.duration}>{x.duration}</div>
                     <div className={St.content}>{x.content}</div>
-                    <div className={St.techs}>
-                      {x.techs.map((x, i) => {
-                        if (i < 3)
-                          return (
-                            <div
-                              className={check ? St.tech_light : St.tech}
-                              key={i}>
-                              {x}
-                            </div>
-                          );
-                      })}
-                      {x.techs.length > 3 ? (
-                        <div className={St.ellipsis}>...</div>
-                      ) : null}
-                    </div>
+                  </div>
+                  <div className={St.techs}>
+                    {x.techs.map((x, i) => {
+                      if (i < 3)
+                        return (
+                          <div
+                            className={check ? St.tech_light : St.tech}
+                            key={i}
+                          >
+                            {x}
+                          </div>
+                        );
+                    })}
+                    {x.techs.length > 3 ? (
+                      <div className={St.ellipsis}>...</div>
+                    ) : null}
                   </div>
                 </div>
               </div>

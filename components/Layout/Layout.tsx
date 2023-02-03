@@ -19,7 +19,8 @@ const Layout = ({ children }: Props) => {
         <Nav />
         <main>
           <section
-            className={checkRoute ? St.main_container_home : St.main_container}>
+            className={checkRoute ? St.main_container_home : St.main_container}
+          >
             {children}
           </section>
         </main>
