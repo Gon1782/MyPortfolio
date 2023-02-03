@@ -1,6 +1,7 @@
-import { atom } from 'recoil';
+import { atom } from "recoil";
+import { v4 } from "uuid";
 
 export const darkState = atom({
-  key: "isDark",
+  key: `isDark/${v4()}`,
   default: false,
-})
+});

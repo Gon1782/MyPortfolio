@@ -2,7 +2,7 @@
 import { RefObject, useCallback, useEffect, useState } from "react";
 
 const useToggleBtn = (array: RefObject<HTMLElement | HTMLButtonElement>[]) => {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(true);
 
   const openHandler = useCallback(() => {
     setOpen(true);

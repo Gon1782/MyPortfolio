@@ -1,0 +1,58 @@
+@import "@/styles/colors"
+
+.project
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 95%
+  height: 90%
+  gap: 5rem
+  overflow-y: scroll
+  &::-webkit-scrollbar
+    display: none
+.container
+  display: flex
+  justify-content: flex-start
+  width: 90%
+  height: 20vh
+  &_2
+    @extend .container
+    justify-content: flex-end
+.box
+  display: flex
+  align-items: center
+  width: 70%
+  height: 25vh
+  background-color: $componentColor
+  border-radius: 0 45px 45px 45px
+  gap: 1rem
+  padding: 0 3rem
+  &_2
+    @extend .box
+    border-radius: 45px 0 45px 45px
+.project_img
+  width: 35%
+  height: 80%
+  object-fit: contain
+.project_box
+  display: flex
+  flex-direction: column
+  font-size: 1.25rem
+  line-height: 1.5rem
+  gap: 1rem
+.title
+  font-size: 2rem
+.techs
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem
+  .tech
+    padding: .5rem 1rem
+    margin-top: .5rem
+    background-color: $bgColor
+    &_light
+      @extend .tech
+      background-color: $fontColor
+  .ellipsis
+    display: flex
+    align-items: flex-end

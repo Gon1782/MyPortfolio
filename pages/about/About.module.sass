@@ -7,7 +7,7 @@
   width: 95%
   height: 90%
   background-color: $componentColor
-  border-radius: 40px
+  border-radius: 2.5rem
 .header
   display: flex
   align-items: center
@@ -15,9 +15,9 @@
   height: 3rem
   margin: 0 auto
   padding: 1rem 5rem
-  font-size: 40px
+  font-size: 2.5rem
   border-bottom: 1px solid $containerColor
-.body
+.info_container
   display: flex
   flex-wrap: wrap
   justify-content: space-around
@@ -29,7 +29,7 @@
     text-decoration: none
     color: $fontColor
   &_light
-    @extend .body
+    @extend .info_container
     a
       text-decoration: none
       color: $bgColor
@@ -40,7 +40,7 @@
   width: 30%
   height: 40%
   background-color: #777DF2
-  border-radius: 30px
+  border-radius: 1.875rem
 .info
   display: flex
   justify-content: center
@@ -50,7 +50,7 @@
     display: flex
     flex-direction: column
     justify-content: center
-    height: 100px
+    height: 6.25rem
     gap: 0.5rem
     font-size: 1.25rem
     .name
